@@ -2,29 +2,34 @@ import React from "react";
 import Layout from "../components/Layout";
 import {
   AboutSection,
-  BlogSection,
-  CompletedSection,
+  ServicesSection,
   Heading,
   HeroSection,
   TestimonialSection,
-  WedoSection,
+  ExpertiesSection,
   WorkSection,
+  ContactSection,
 } from "../styles/home.styles";
 
 const services = [
   {
-    icon: "/assets1/Icon1.png",
-    name: "Strategy & Research",
+    icon: "/assets/IconFrontend.png",
+    name: "Frontend & Responsive Coding",
     text: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt doloribus perspiciatis natus eveniet nesciunt facere.",
   },
   {
-    icon: "/assets1/Icon2.png",
-    name: "Design & Development",
+    icon: "/assets/IconInterface.png",
+    name: "User Experience & Interface Design",
     text: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt doloribus perspiciatis natus eveniet nesciunt facere.",
   },
   {
-    icon: "/assets1/Icon3.png",
-    name: "Management & Marketing",
+    icon: "/assets/IconMarketing.png",
+    name: "Social Media & Online Marketing",
+    text: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt doloribus perspiciatis natus eveniet nesciunt facere.",
+  },
+  {
+    icon: "/assets/IconMobileApp.png",
+    name: "Mobile Application & Game Development",
     text: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt doloribus perspiciatis natus eveniet nesciunt facere.",
   },
 ];
@@ -43,137 +48,128 @@ export default function Home() {
             <h1>
               I'm <span className="line">Rahan Bouess</span>
               <br />
-              Web & Mobile <br /> Developer
+              Frontend / React <br /> Developer
               <span className="yellow">.</span>
             </h1>
           </div>
         </div>
       </HeroSection>
 
-      <WedoSection>
-        <div className="wedo__content">
-          <Heading
-            style={{
-              backgroundImage: `url(/assets1/bgShape.png)`,
-            }}
-          >
-            <div className="title">What we do</div>
+      <AboutSection id="aboutme">
+        <div className="about__content">
+          <img className="about-img" src="/assets/portrait.jpg" alt="ceo" />
+
+          <div className="about__content--main">
+            <Heading left>
+              <h1 className="title">
+                About me <span className="yellow">.</span>
+              </h1>
+              <div className="links">
+                <div className="line"></div>
+                <button className="link active">Myself.</button>
+                <button className="link">Eductaion.</button>
+                <button className="link">Skill.</button>
+              </div>
+            </Heading>
+
             <div className="text">
-              The Things motivates me is common <br /> form of motivation.
+              <p>
+                Hello! I’m Rahan Bouess a self-taught & award winning Digital
+                Designer & Developer with over tree years work experience. I
+                started in my children’s room, got pro at renowned digital
+                agencies akij co and nork blue lebel. Now I’m based in China,
+                working for Apple fredmansky and enjoying the life in the
+                countryside.
+              </p>
+            </div>
+
+            <div className="more">
+              <button className="btn-cv">Download CV</button>
+              <button className="btn-hire">Hire Me</button>
+            </div>
+          </div>
+        </div>
+      </AboutSection>
+
+      <ExpertiesSection id="experties">
+        <div className="experties__content">
+          <Heading>
+            <h1 className="title">
+              Experties<span className="yellow">.</span>
+            </h1>
+            <div className="number">
+              O2 <div className="line"></div>
+            </div>
+          </Heading>
+
+          <div className="experties">
+            <div className="experties-item">
+              <p className="name">Web Designing.</p>
+              <span className="text">HTML/CSS</span>
+            </div>
+
+            <div className="experties-item">
+              <p className="name">Graphic Design.</p>
+              <span className="text">UI/UX</span>
+            </div>
+
+            <div className="experties-item">
+              <p className="name">Web Development.</p>
+              <span className="text">WORDPRESS/REACT</span>
+            </div>
+
+            <div className="experties-item">
+              <p className="name">Application Dev</p>
+              <span className="text">ANDROID/IOS /HYBRID</span>
+            </div>
+          </div>
+        </div>
+      </ExpertiesSection>
+
+      <ServicesSection id="services">
+        <div className="services__content">
+          <Heading>
+            <div className="title">Services</div>
+
+            <div className="number">
+              O3 <div className="line"></div>
             </div>
           </Heading>
 
           <div className="services">
             {services.map((item, i) => (
               <div className="services-item" key={i}>
-                <img src={item.icon} alt="icon" />
-                <p className="name">{item.name}</p>
+                <div className="top">
+                  <img src={item.icon} alt="services" />
+                </div>
+
+                <p className="title">{item.name}</p>
+
                 <p className="text">{item.text}</p>
-                <a href="https://google.com" className="link">
-                  <p>More About {item.name}</p>
-                </a>
               </div>
             ))}
           </div>
         </div>
-      </WedoSection>
+      </ServicesSection>
 
-      <AboutSection
-        style={{
-          backgroundImage: `url(/assets1/Group.png)`,
-        }}
-      >
-        <div className="about__content">
-          <img className="about-img" src="/assets1/ceo.png" alt="ceo" />
-
-          <div className="about__content--main">
-            <Heading left>
-              <div className="title">About us</div>
-              <div className="text">
-                Leading digital agency <br /> for business solution
-              </div>
-            </Heading>
-
-            <div className="text">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium commodi tempora doloribus, quo esse porro, quas
-                nobis autem enim, voluptas id nisi beatae facere! Totam?
-                <br />
-                <br />
-                <br />
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam ipsum excepturi tempore. Dicta, hic molestias.
-                </span>
-              </p>
-            </div>
-
-            <div className="author">
-              <p>
-                Rashed Kabir, <span>CEO CreativeGigs</span>
-              </p>
-            </div>
-
-            <div className="more">
-              <button className="btn-primary">Learn More ></button>
-            </div>
-          </div>
-        </div>
-      </AboutSection>
-
-      <CompletedSection>
-        <Heading>
-          <div className="text">
-            We completed 1500+ Projects Yearly <br />
-            successfully & counting
-          </div>
-        </Heading>
-
-        <div
-          className="stats"
-          style={{
-            backgroundImage: `url(/assets1/ctaBg.png)`,
-          }}
-        >
-          <div className="stats-item">
-            <p className="numbers">16K</p>
-            <p className="name">Global Customer</p>
-          </div>
-          <div className="stats-item">
-            <p className="numbers">1500+</p>
-            <p className="name">Completed Projects</p>
-          </div>
-          <div className="stats-item">
-            <p className="numbers">460+</p>
-            <p className="name">Experrs Worker</p>
-          </div>
-        </div>
-        <div className="cta">
-          <div className="text">
-            <p>Have any question ?</p>
-            <span>Don't hesitate to contact us</span>
-          </div>
-
-          <button className="btn-primary">Contact us</button>
-        </div>
-      </CompletedSection>
-
-      <WorkSection
-        style={{
-          backgroundImage: `url(/assets1/WorkGallery.png)`,
-        }}
-      >
+      <WorkSection id="mywork">
         <div className="work__content">
           <div className="work__content--top">
-            <Heading left>
-              <div className="text">
-                Check some of our <br /> Recent Work
+            <Heading>
+              <h1 className="title">
+                Projects<span className="yellow">.</span>
+              </h1>
+              <div className="number">
+                O4 <div className="line"></div>
               </div>
-              <p className="text2">
-                {" "}
-                Click the button on the side to check all of our work
-              </p>
+
+              <div className="links">
+                <div className="line"></div>
+                <button className="link active">Design.</button>
+                <button className="link">Development.</button>
+                <button className="link">Marketing.</button>
+                <button className="link">Photoshop.</button>
+              </div>
             </Heading>
 
             <div className="buttons">
@@ -183,41 +179,39 @@ export default function Home() {
 
           <div className="work__content--list">
             <a href="http://google.com">
-              <img src="/assets1/work1.png" alt="project" />
+              <img src="/assets/ImageGallery.png" alt="project" />
             </a>
             <a href="http://google.com">
-              <img src="/assets1/work2.png" alt="project" />
+              <img src="/assets/Image7.png" alt="project" />
             </a>
             <a href="http://google.com">
-              <img src="/assets1/work3.png" alt="project" />
+              <img src="/assets/ImageGallery.png" alt="project" />
             </a>
             <a href="http://google.com">
-              <img src="/assets1/work4.png" alt="project" />
+              <img src="/assets/Image7.png" alt="project" />
             </a>
           </div>
         </div>
       </WorkSection>
 
-      <TestimonialSection
-        style={{
-          backgroundImage: `url(/assets1/reviewbg.png)`,
-        }}
-      >
-        <div className="about__content">
-          <img
-            className="about-img"
-            src="/assets1/ClientImage.png"
-            alt="clients"
-          />
+      <TestimonialSection id="testimonials">
+        <Heading left>
+          <div className="title">Testimonials</div>
+          <div className="number">
+            O5 <div className="line"></div>
+          </div>
+        </Heading>
 
-          <div className="about__content--main">
-            <Heading left>
-              <div className="title">Testimonials</div>
-              <div className="text">
-                Check what's our client <br /> say about us!
-              </div>
-            </Heading>
+        <div className="testimonials__content">
+          <div className="text1">
+            <p>
+              What <br />
+              My Clients Say <br /> About me
+            </p>
+          </div>
 
+          <div className="testimonials__content--main">
+            <img src="/assets/Icon.png" alt="" className="img" />
             <div className="text">
               <p>
                 Having a home based business is a wonderful asset to your life.
@@ -228,7 +222,7 @@ export default function Home() {
             </div>
 
             <div className="author">
-              <img src="/assets1/testiImage.png" alt="client" />
+              <img src="/assets/testiImage.png" alt="client" />
               <p>
                 Rashed Kabir
                 <br /> <span>Designer</span>
@@ -237,91 +231,53 @@ export default function Home() {
 
             <div className="slide-btns">
               <button className="slide-btn">
-                <img src="/assets1/Iconarrowback.png" alt="" />
+                <img src="/assets/arrow2.png" alt="" />
               </button>
               <button className="slide-btn">
-                <img src="/assets1/Iconarrownext.png" alt="" />
+                <img src="/assets/rightArrow.png" alt="" />
               </button>
             </div>
           </div>
         </div>
       </TestimonialSection>
 
-      <BlogSection>
-        <div className="wedo__content">
-          <Heading
-            style={{
-              backgroundImage: `url(/assets1/bgShape.png)`,
-            }}
-          >
-            <div className="title">our Blog</div>
-            <div className="text">Our Company News</div>
-          </Heading>
-
-          <div className="news">
-            <div className="news-item">
-              <div className="top">
-                <img src="/assets1/newsimg.png" alt="news" />
-                <p>
-                  Jannatul Ferdus <br />
-                  <span>06 Aug 2018</span>
-                </p>
-              </div>
-
-              <p className="title">Internet advertising what went wrong</p>
-
-              <p className="text">
-                Having a home based business is a wonderful asset to your life.
-                The problem still stands, when it comes time advertise
-              </p>
-
-              <a href="http://google.com" className="link">
-                <img src="/assets1/Iconarrownext.png" alt="" />
-              </a>
-            </div>
-            <div className="news-item">
-              <div className="top">
-                <img src="/assets1/newsimg.png" alt="news" />
-                <p>
-                  Jannatul Ferdus <br />
-                  <span>06 Aug 2018</span>
-                </p>
-              </div>
-
-              <p className="title">Internet advertising what went wrong</p>
-
-              <p className="text">
-                Having a home based business is a wonderful asset to your life.
-                The problem still stands, when it comes time advertise
-              </p>
-
-              <a href="http://google.com" className="link">
-                <img src="/assets1/Iconarrownext.png" alt="" />
-              </a>
-            </div>
-            <div className="news-item">
-              <div className="top">
-                <img src="/assets1/newsimg.png" alt="news" />
-                <p>
-                  Jannatul Ferdus <br />
-                  <span>06 Aug 2018</span>
-                </p>
-              </div>
-
-              <p className="title">Internet advertising what went wrong</p>
-
-              <p className="text">
-                Having a home based business is a wonderful asset to your life.
-                The problem still stands, when it comes time advertise
-              </p>
-
-              <a href="http://google.com" className="link">
-                <img src="/assets1/Iconarrownext.png" alt="" />
-              </a>
-            </div>
+      <ContactSection id="contact">
+        <div className="heading">
+          <img src="/assets/IconMessage.png" alt="" className="img" />
+          <div className="label">CONTACT US</div>
+          <div className="text">
+            {" "}
+            Send me a message, I will be in touch <br /> with you shortly.
           </div>
         </div>
-      </BlogSection>
+
+        <form className="form">
+          <div className="form__content">
+            <div className="form-div">
+              <input
+                className="mg"
+                type="text"
+                placeholder="Enter your name*"
+              />
+              <input type="email" placeholder="Enter your Email Address*" />
+            </div>
+            <div className="form-div">
+              <input type="text" placeholder="Your Subject*" />
+            </div>
+            <div className="form-div">
+              <textarea
+                name="message"
+                placeholder="Your Message*"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <div className="form-div">
+              <button className="btn-submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </ContactSection>
     </Layout>
   );
 }

@@ -3,7 +3,6 @@ import { colors } from "../../styles/colors";
 
 export const FooterContainer = styled.footer`
   position: relative;
-  min-height: 40vh;
   width: 100%;
   height: 100%;
   background-position: 50% 50%;
@@ -12,52 +11,33 @@ export const FooterContainer = styled.footer`
   margin-top: 10rem;
 
   .footer__content {
-    display: flex;
-    justify-content: space-evenly;
+    text-align: center;
 
-    @media (max-width: 768px) {
-      display: block;
-      padding: 2rem;
+    .socials {
+      .social {
+        width: 45px;
+        height: 45px;
+        background-color: #282a4f;
+        border-radius: 50%;
+        margin: 0 1rem;
+
+        &:hover {
+          background-color: ${colors.yellow};
+        }
+      }
+    }
+    .copy {
+      font-size: 1.4rem;
+      color: #fff;
+      padding: 2rem 0;
+
+      span {
+        color: ${colors.yellow};
+      }
     }
   }
 
   .footer__section {
-    .logo {
-      font-size: 3rem;
-      color: ${colors.blue};
-    }
-
-    .text {
-      font-size: 1.5rem;
-      color: ${colors.gray};
-      padding: 1rem 0;
-    }
-
-    .red {
-      font-size: 1.5rem;
-      color: ${colors.red};
-    }
-
-    .title {
-      font-size: 1.8rem;
-      color: ${colors.blue};
-      padding-bottom: 1.5rem;
-    }
-
-    ul {
-      list-style-type: none;
-      li {
-        padding: 1rem 0;
-        a {
-          font-size: 1.4rem;
-
-          &:hover {
-            color: ${colors.red};
-          }
-        }
-      }
-    }
-
     @media (max-width: 768px) {
       padding: 2rem 0;
     }

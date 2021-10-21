@@ -30,6 +30,7 @@ export const NavItems = styled.div`
   ul {
     display: flex;
     list-style-type: none;
+    align-items: center;
 
     li {
       padding: 0 3rem;
@@ -43,11 +44,16 @@ export const NavItems = styled.div`
       }
 
       &.social {
-        a {
+        button {
           width: 45px;
           height: 45px;
+          background-color: #282a4f;
           border-radius: 50%;
-          border: 1px solid ${colors.gray};
+          margin-right: 1rem;
+
+          &:hover {
+            background-color: ${colors.yellow};
+          }
         }
       }
     }
@@ -57,31 +63,47 @@ export const NavItems = styled.div`
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
-    padding: 0 2rem;
+    padding: 0;
 
     .logo {
+      padding: 0 2rem;
       img {
         width: 50%;
       }
     }
     .menu {
       display: block;
+
+      padding: 0 2rem;
     }
 
     ul {
       position: absolute;
       display: block;
       width: 100%;
-      transform: translateY(${(props) => (props.active ? "10rem" : "-20rem")});
+      transform: translateY(${(props) => (props.active ? "15rem" : "-20rem")});
       transition: all 0.3s ease;
       z-index: 9999;
       background-color: #fff;
+      padding: 0 2rem;
 
       li {
         padding: 1rem 0rem;
 
         a {
           font-size: 1.5rem;
+          color: ${colors.gray};
+        }
+
+        &.social {
+          button {
+            width: 35px;
+            height: 35px;
+
+            img {
+              width: 15px;
+            }
+          }
         }
       }
     }
